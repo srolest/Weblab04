@@ -14,5 +14,22 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout /etc/ssl/private/apache-selfsigned.key \
   -out /etc/ssl/certs/apache-selfsigned.crt
 ```
+### 2. Create the configuration file
 Next, once the certificate has been generated and the certificate (.crt) and key (.key) have been entered in the `/etc/ssl` directory, we configure the configuration file, which we have named **discovery-ssl.conf**.
 [CONFIGURATION_FILE](./images/conf_file.png)
+
+### 3. Enable module/site
+Enable the SSL module:
+```bash
+sudo a2enmod ssl.
+```
+
+Enable the site:
+```bash 
+sudo a2ensite discovery-ssl.conf.
+```
+
+Restart Apache: 
+```bash 
+sudo systemctl restart apache2.
+```
