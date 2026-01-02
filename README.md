@@ -47,5 +47,6 @@ When accessing the URL `https://discovery.sistema.sol` via HTTPS, the browser id
 ### 2. Access to the Secure Website
 We click on advanced options and tell it that we want to access the page even though it is not secure.
 Once the security exception is accepted, the site content can be viewed. Verify that the address bar displays the `https://` protocol.
-[Advanced options](./images/advanced_options.png)
+
+![Advanced options](./images/advanced_options.png)
 ![Successful HTTPS Access](./images/successful.png)
